@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DeskSpace HQ
 
-## Getting Started
+Kantor virtual 2D multiplayer bergaya *Gather.town* yang dibangun dengan **Next.js**, **HTML5 Canvas**, dan **Supabase Realtime**.
 
-First, run the development server:
+**Live Demo:** [deskspace-gilt.vercel.app](https://deskspace-gilt.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Fitur Utama
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Multiplayer Real-Time:** Sinkronisasi posisi karakter, status duduk, chat, dan *Wave* antar pemain secara langsung menggunakan **Supabase Realtime (Presence & Broadcast)**.
+* **Kustomisasi Avatar Chibi:** Pilihan nama, peran (*role*), warna baju, serta gaya rambut dan aksesori (*Pendek Poni*, *Panjang Sebahu*, dan *Topi Merah*) dengan *live canvas preview* di lobby.
+* **Ruang Kantor Interaktif:**
+  * Pergerakan 1:1 menggunakan tombol **WASD** atau **Panah** (serta klik langsung pada lantai).
+  * Otomatis duduk saat mendekati kursi kerja maupun sofa di *Coffee Lounge*.
+  * Deteksi zona otomatis (*Main Hallway*, *Work Desk Zone*, *Meeting Room*, dan *Coffee Lounge*).
+* **Spatial Chat & Wave:** Gelembung chat muncul langsung di atas kepala karakter, dilengkapi tombol *Wave* dengan efek suara *chime* saat berada di dekat rekan kerja.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **Framework:** Next.js (App Router) & TypeScript
+* **Styling & Icons:** Tailwind CSS & Lucide React
+* **Rendering:** Custom 2D Top-Down Pixel Canvas (`lib/isoRenderer.ts`)
+* **Realtime & Database:** Supabase (`deskspace` schema)
+* **Deployment:** Vercel
 
-## Learn More
+## Menjalankan Secara Lokal
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone repository ini:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone [https://github.com/10kiyo/deskspace.git](https://github.com/10kiyo/deskspace.git)
+   cd deskspace
